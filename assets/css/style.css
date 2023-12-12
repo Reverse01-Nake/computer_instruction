@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+:root {
+    --main-bg: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 30%, rgba(0, 212, 255, 1) 100%);
+    ;
+    --bg: #dee5ee;
+    --color-w: #fff;
+    --color-b: #0b5ed7;
+}
+
+* {
+    font-family: 'Noto Sans Thai', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.homePage>.heaDer a {
+    text-decoration: none;
+    color: var(--color-w);
+    transition: all 300ms ease;
+}
+
+.homePage>.heaDer a:hover {
+    letter-spacing: 5px;
+}
+
+.homePage {
+    background: var(--main-bg);
+}
+
+.heaDer {
+    display: flex;
+    justify-content: end;
+    padding: 2rem 10rem;
+}
+
+.heaDer a {
+    margin-left: 5rem;
+}
+
+.homeMain {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 85vh;
+
+}
+
+.homeBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.homeBox h1 {
+    font-size: 4rem;
+}
+
+.homeBox h2 {
+    font-size: 3.0rem;
+}
+
+.homeButton {
+    /* background-color: #eaedf152; */
+    color: var(--color-w);
+    width: 70%;
+    padding-bottom: 5rem;
+}
+
+.btn-rol {
+    border-radius: 1.5rem;
+    font-size: 1.3rem;
+    margin-right: 1.5rem;
+    width: 9rem;
+}
+
+.btn-rols:hover {
+    background-color: var(--color-w)fff00;
+    color: var(--color-w);
+}
+
+.alfa {
+    background-color: var(--color-w)fff00;
+    width: 14rem;
+    color: var(--color-w);
+}
+
+.modal {
+    backdrop-filter: blur(10px);
+}
+
+.s-login {
+    margin-top: 11rem;
+}
+
+.s-register {
+    margin-top: 7rem;
+}
+
+.t-login {
+    margin-top: 11rem;
+}
+
+.t-logins {
+    margin-top: 9rem;
+}
+
+.modal-footer p:hover {
+    color: var(--color-b);
+}
+
+.homeBox img {
+    animation: jumper 5s infinite ease-in-out;
+}
+
+.alert {
+    position: fixed;
+    animation: alert 300ms;
+    box-shadow: 5px 5px 5px #0000003d;
+}
+
+.a-h {
+    top: 5rem;
+    left: 2.5rem;
+}
+
+.a-d {
+    bottom: 7rem;
+    right: 2.5rem;
+}
+
+.closeAlert {
+    transform: translateX(-12rem);
+    opacity: 0;
+}
+
+.headMenu {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    height: 4rem;
+}
+
+.main {
+    display: flex;
+    /* height: 80%; */
+}
+
+aside {
+    width: 22rem;
+    height: 100%;
+    padding: 1rem;
+    /* background-color: aqua; */
+}
+
+.modal-body {
+    max-height: 30rem;
+    overflow-y: scroll;
+}
+
+.flex {
+    display: flex;
+}
+
+.card-header .flex {
+    position: absolute;
+    right: 1rem;
+}
+
+.date {
+    position: absolute;
+    right: 2rem;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+}
+
+.menuHover {
+    transition: all 300ms ease;
+}
+
+.menuHover:hover {
+    margin-left: 20px;
+}
+
+.showDisplay {
+    width: 100%;
+    border-radius: 20px 0 0 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(204, 219, 232, .7) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    background-color: rgb(230, 232, 240);
+    overflow-y: scroll;
+}
+
+.card {
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 3px 3px 5px rgba(204, 219, 232, .7);
+}
+
+/* .progress {
+    width: 100%;
+    height: 20px;
+    border: 1px solid #272aff;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #000;
+    transition: width 1s;
+} */
+
+@keyframes alert {
+    0% {
+        transform: translateX(-12rem);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes closeAlert {
+    0% {
+        display: none;
+    }
+
+    100% {
+        transform: translateX(-12rem);
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes jumper {
+    0% {
+        transform: translateY(0rem) scaleY(.95);
+    }
+
+    50% {
+        transform: translateY(-2rem) scaleY(1);
+    }
+
+    100% {
+        transform: translateY(0rem) scaleY(.95);
+    }
+}
